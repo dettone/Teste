@@ -19,10 +19,10 @@ use  \App\Http\Controllers\Site\ContactController;
 */
 
 
-Route::get('/', HomeController::class);
-Route::get('products', [CategoryController::class, 'index']);
-Route::get('products/{slug}', [CategoryController::class, 'show']);
-Route::get('blog', BlogController::class);
-Route::view('about', 'site.about.index');
-Route::get('contact', [ContactController::class, 'index']);
-Route::post('contact', [ContactController::class, 'form']);
+Route::get('/', HomeController::class)->name('site.home');
+Route::get('products', [CategoryController::class, 'index'])->name('site.products');
+Route::get('products/{slug}', [CategoryController::class, 'show'])->name('site.products.category');
+Route::get('blog', BlogController::class)->name('site.blog');
+Route::view('about', 'site.about.index')->name('site.about');
+Route::get('contact', [ContactController::class, 'index'])->name('site.contact');
+Route::post('contact', [ContactController::class, 'form'])->name('site.contact.form');

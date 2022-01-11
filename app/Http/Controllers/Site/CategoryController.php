@@ -49,6 +49,7 @@ class CategoryController extends Controller
         return view('site.category.show', ['slug' => $slug]);
     }
 
+
     /**
      * Show the form for editing the specified resource.
      *
